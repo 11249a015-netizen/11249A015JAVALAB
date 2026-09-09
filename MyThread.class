@@ -1,0 +1,22 @@
+// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
+class MyThread extends Thread {
+   String name;
+
+   MyThread(String var1) {
+      this.name = var1;
+   }
+
+   public void run() {
+      for(int var1 = 1; var1 <= 3; ++var1) {
+         System.out.println(this.name + " : " + var1);
+      }
+
+   }
+
+   public static void main(String[] var0) {
+      MyThread var1 = new MyThread("Thread 1");
+      MyThread var2 = new MyThread("Thread 2");
+      var1.start();
+      var2.start();
+   }
+}
